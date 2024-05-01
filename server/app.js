@@ -4,22 +4,22 @@ const fs = require("fs");
 const mongoose = require('mongoose')
 const cors = require('cors');
 
-const MONGODB_URI = 'mongodb+srv://user1:admin@cluster0.aradevr.mongodb.net/?retryWrites=true&w=majority'
+// const MONGODB_URI = 'mongodb+srv://user1:admin@cluster0.aradevr.mongodb.net/?retryWrites=true&w=majority'
 
-mongoose.connect(MONGODB_URI, {
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-})
+// mongoose.connect(MONGODB_URI, {
+//     useNewUrlParser:true,
+//     useUnifiedTopology:true,
+// })
 
 const questionString = fs.readFileSync('./questions.json');
 const questionsArray = JSON.parse(questionString);
 
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
-db.on('error', console.error.bind(console, 'connection error'));
-db.once('open', ()=>{
-    console.log('connected');
-})
+// db.on('error', console.error.bind(console, 'connection error'));
+// db.once('open', ()=>{
+//     console.log('connected');
+// })
 
 app.use(cors());
 
